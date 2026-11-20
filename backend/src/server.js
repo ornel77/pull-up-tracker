@@ -23,14 +23,14 @@ app.use(
 app.use(express.json({ limit: "10kb" }));
 
 // API Routes
-app.use("api/health", healthRoutes);
+app.use("/api/health", healthRoutes);
 
 // Start server
 const startServer = async () => {
   try {
-    // await connectDB();
+    await connectDB();
 
-    await app.listen(env.port, () => {
+    app.listen(env.port, () => {
       console.log(`Server running in ${env.nodeEnv} mode on port ${env.port}`);
     });
   } catch (error) {
