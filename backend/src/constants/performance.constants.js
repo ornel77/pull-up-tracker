@@ -1,0 +1,2 @@
+export const MIN_DURATION_SECONDS = 1
+export const MAX_COMMENT_LENGTH = 500
